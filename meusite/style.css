@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: pink;
+    color: white;
+    padding: 15px;
+    align-items: center;
+    height: 100px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+aside {
+    width: 200px;
+    background-color: #ffe9e9;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 300px;
+    background-color: rgb(255, 146, 164);
+    padding: 15px;
+}
+
+button{
+    width: 60px;
+}
