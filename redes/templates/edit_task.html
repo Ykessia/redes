@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Tarefa{% endblock %}
+
+{% block content %}
+<h2>Editar Tarefa</h2>
+<div class="login-register">
+    
+    <form method="POST">
+        <label for="descricao">Descrição:</label>
+        <input type="text" name="descricao" value="{{ task['descricao'] }}" required>
+        
+        <label for="status">Status:</label>
+        <select name="status">
+            <option value="Pendente" {% if task['status'] == 'Pendente' %}selected{% endif %}>Pendente</option>
+            <option value="Em andamento" {% if task['status'] == 'Em andamento' %}selected{% endif %}>Em andamento</option>
+            <option value="Concluída" {% if task['status'] == 'Concluída' %}selected{% endif %}>Concluída</option>
+        </select>
+        
+        <label for="data_limite">Data Limite:</label>
+        <input type="date" name="data_limite" value="{{ task['data_limite'] }}">
+        
+        <label for="prioridade">Prioridade:</label>
+        <select name="prioridade">
+            <option value="Baixa" {% if task['prioridade'] == 'Baixa' %}selected{% endif %}>Baixa</option>
+            <option value="Média" {% if task['prioridade'] == 'Média' %}selected{% endif %}>Média</option>
+            <option value="Alta" {% if task['prioridade'] == 'Alta' %}selected{% endif %}>Alta</option>
+        </select>
+        
+        <label for="categoria">Categoria:</label>
+        <select name="categoria">
+            <option value="Trabalho" {% if task['categoria'] == 'Trabalho' %}selected{% endif %}>Trabalho</option>
+            <option value="Estudo" {% if task['categoria'] == 'Estudo' %}selected{% endif %}>Estudo</option>
+            <option value="Pessoal" {% if task['categoria'] == 'Pessoal' %}selected{% endif %}>Pessoal</option>
+        </select>
+        
+        <button type="submit">Salvar</button>
+    </form>
+
+
+</div>
+
+{% endblock %}
